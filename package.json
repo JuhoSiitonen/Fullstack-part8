@@ -1,0 +1,19 @@
+{
+  "name": "fullstack-part8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuhoSiitonen/Fullstack-part8.git"
+  },
+  "author": "Juho Siitonen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuhoSiitonen/Fullstack-part8/issues"
+  },
+  "homepage": "https://github.com/JuhoSiitonen/Fullstack-part8#readme"
+}
