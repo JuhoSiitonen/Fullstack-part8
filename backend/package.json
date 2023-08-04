@@ -1,0 +1,24 @@
+{
+  "name": "fullstack-part8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuhoSiitonen/Fullstack-part8.git"
+  },
+  "author": "Juho Siitonen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuhoSiitonen/Fullstack-part8/issues"
+  },
+  "homepage": "https://github.com/JuhoSiitonen/Fullstack-part8#readme",
+  "dependencies": {
+    "@apollo/server": "^4.8.1",
+    "graphql": "^16.7.1"
+  }
+}
