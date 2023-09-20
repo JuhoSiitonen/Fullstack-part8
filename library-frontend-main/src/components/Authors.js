@@ -20,8 +20,6 @@ const Authors = (props) => {
 
   const submit = async (event) => {
     event.preventDefault()
-
-    console.log("add book...")
     let year = Number(yearBorn)
     updateAuthor({ variables: { author, year } })
 
@@ -58,8 +56,11 @@ const Authors = (props) => {
       <form onSubmit={submit}>
         name
         <select value={author} onChange={({ target }) => setAuthor(target.value)}>
+          <option value={""}></option>
           {authors.map((a) => (
-            <option value={a.name}>{a.name}</option>
+            <option value={a.name} key={a.name}>
+              {a.name}
+            </option>
           ))}
         </select>
         born

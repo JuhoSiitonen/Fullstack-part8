@@ -13,8 +13,11 @@ export const ALL_BOOKS = gql`
   query {
     allBooks {
       title
-      author
+      author {
+        name
+      }
       published
+      genres
     }
   }
 `
@@ -25,10 +28,24 @@ export const ADD_BOOK = gql`
     $author: String!
     $genres: [String]!
   ) {
-    addBook(title: $title, published: $published, author: $author, genres: $genres) {
+    addBook(title: $title, published: $published, name: $author, genres: $genres) {
       title
       published
-      author
+      author {
+        name
+      }
+      genres
+    }
+  }
+`
+export const BY_GENRE = gql`
+  query by_genre($filter: String!) {
+    allBooks(genre: $filter) {
+      title
+      author {
+        name
+      }
+      published
       genres
     }
   }
@@ -39,6 +56,35 @@ export const UPDATE_AUTHOR = gql`
     editAuthor(name: $author, setBornTo: $year) {
       name
       born
+    }
+  }
+`
+
+export const LOGIN = gql`
+  mutation login($username: String!, $password: String!) {
+    login(username: $username, password: $password) {
+      value
+    }
+  }
+`
+export const CREATE_USER = gql`
+  mutation createUser($username: String!) {
+    createUser(username: $username) {
+      username
+      id
+    }
+  }
+`
+
+export const BOOK_ADDED = gql`
+  subscription {
+    bookAdded {
+      title
+      author {
+        name
+      }
+      published
+      genres
     }
   }
 `
